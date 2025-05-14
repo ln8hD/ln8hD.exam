@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форум, посвященный horror-rpg играм. Обсуждение, прохождения и теории.">
+    <link rel="stylesheet" href="create.css">
+    <title>HorRPG</title>
+</head>
+<body>
+
+    <div class="auth-container">
+        <a href="login.html" class="auth-button">Авторизация</a>
+    </div>
+
+    <header style="text-align: center; margin-top: 20px;"> <!-- Добавлен отступ сверху -->
+        <!-- Обновленный логотип -->
+        <div id="logo-container" style="display: inline-block; position: relative;">
+            <a href="index.html">
+                <img src="image/logo.png" alt="HorRPG" style="width: 180px; height: auto;">
+            </a>
+
+    <!-- Описание страницы -->
+    <div style="text-align: center; width: 70%; margin: 0 auto;">
+        <p style="text-align: justify;">
+            Здесь вы можете написать свой собственный пост и опубликовать его. Делитесь впечатлениями, теориями и всем, что позволит ваша фантазия.
+            Перед публикацией ознакомьтесь с <a href="404.html">правилами сайта</a>.
+        </p>
+
+ <nav style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+        <strong>
+            <a href="404.html">Новое</a> | 
+            <a href="popular.html">Популярное</a> |  
+            <a href="creation.html">Творчество</a> |
+            <a href="404.html">Сообщества</a>
+        </strong>
+    </nav>
+
+    <!-- Обновлённый блок поиска и кнопки создания -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <div style="display: inline-block;">
+            <a href="javascript:void(0)" onclick="toggleSearch()" id="search-toggle">Поиск</a>
+            <span> | </span>
+            <strong><a href="create.html">Создать пост</a></strong>
+        </div>
+        <div id="search-form-container" style="display: none; margin-top: 10px;">
+            <form id="search-form" onsubmit="return false;" style="display: inline;">
+                <input type="text" id="search-input" placeholder="Введите запрос" style="padding: 5px;">
+                <button type="submit" onclick="handleSearch()" style="padding: 5px 10px;">Поиск</button>
+            </form>
+        </div>
+    </div>
+
+
+        <div class="post-form-container">
+
+            <!-- Кнопки форматирования -->
+            <div style="margin-bottom: 10px;">
+                <button type="button" data-tag="b">B</button>
+                <button type="button" data-tag="i">I</button>
+                <button type="button" data-tag="s">S</button>
+                <button type="button" data-tag="h">H</button>
+                <button type="button" data-tag="spoiler">SPL</button>
+                <button type="button" id="fileBtn">Загрузить файл</button>
+                <input type="file" id="fileInput" style="display: none;">
+            </div>
+
+            <!-- Таблица формы -->
+            <table class="post-form-table" border="0" cellspacing="10" cellpadding="0">
+                <tr>
+                    <td>
+                        <input type="text" id="postTitle" placeholder="Заголовок" style="width: 100%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="postText" placeholder="Введите текст поста..." style="width: 100%; height: 200px;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="margin-right: 10px;">Выбрать теги:</label>
+                        <div style="max-height: 80px; overflow-y: auto; border: 1px solid black; padding: 5px;">
+                            <label><input type="checkbox" name="tags" value="Гайды"> Гайды</label><br>
+                            <label><input type="checkbox" name="tags" value="Секреты, пасхалки"> Секреты, пасхалки</label><br>
+                            <label><input type="checkbox" name="tags" value="Теории"> Теории</label><br>
+                            <label><input type="checkbox" name="tags" value="Лор, сюжет"> Лор, сюжет</label><br>
+                            <label><input type="checkbox" name="tags" value="Спойлеры"> Спойлеры</label><br>
+                            <label><input type="checkbox" name="tags" value="Мем"> Мем</label><br>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Кнопка публикации -->
+            <div style="text-align: center; margin-top: 15px;">
+                <button id="publishBtn">Опубликовать пост</button>
+            </div>
+
+            <!-- Результат -->
+            <div id="result" style="text-align: center; margin-top: 10px;"></div>
+            <div id="postsContainer"></div>
+
+            <!-- Таблица счетчика -->
+            <table class="post-counter-table" border="1" cellspacing="10" cellpadding="10">
+                <tr>
+                    <td>Количество ваших выложенных постов:</td>
+                    <td><span id="postCount">0</span></td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <table align="center" cellspacing="0" cellpadding="10" width="40%" style="margin-top: 20px; border: none;">
+        <tr>
+            <td align="center" style="display: flex; align-items: center; justify-content: center; border: none;">
+                <img src="image/image01.png" alt="Логотип" style="width: 80px; height: auto; margin-right: 20px;" loading="lazy">
+                <div>
+                    <a href="404.html">Контакты</a> <br>
+                    <a href="404.html">FAQ</a> <br>
+                    <a href="404.html">Правила сайта</a> <br>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" style="border: none;">
+                <div>
+                    <strong>Наши соцсети:</strong>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 8px;">
+                        <a href="https://vk.com" target="_blank"><img src="image/vk.png" alt="VK" style="width: 30px; height: 30px;"></a>
+                        <a href="http://twitter.com" target="_blank"><img src="image/tw.png" alt="TwitterX" style="width: 30px; height: 30px;"></a>
+                        <a href="https://telegram.org/" target="_blank"><img src="image/tg.png" alt="Telegram" style="width: 30px; height: 30px;"></a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" style="border: none;">© 2025 HorRPG Forum. Все права защищены.</td>
+        </tr>
+    </table>
+
+    <script src="create.js"></script> <!-- Подключение скприпта для форматирования текста -->
+    <script src="search.js"></script>
+
+</body>
+</html>

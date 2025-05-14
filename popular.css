@@ -1,0 +1,168 @@
+.post-column {
+    flex: 1; /* Позволяет колонке занимать доступное пространство */
+    max-width: 60%; /* Ограничивает ширину до 60% от контейнера */
+}
+
+.post {
+    background-color: #1e1e1e; /* Тёмный фон поста */
+    color: #f0f0f0; /* Светлый текст */
+    border-radius: 12px; /* Закруглённые углы */
+    padding: 20px; /* Внутренний отступ */
+    margin-bottom: 20px; /* Отступ снизу между постами */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для объёма */
+    font-family: 'Spectral SC', serif; /* Основной шрифт */
+}
+
+.post-header {
+    display: flex; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.avatar {
+    width: 40px; /* Ширина аватара */
+    height: 40px; /* Высота аватара */
+    border-radius: 50%; /* Круглая форма */
+    margin-right: 10px; /* Отступ от имени */
+}
+
+.username {
+    margin-right: auto; /* Сдвигает имя влево, освобождая место справа */
+}
+
+.post-date {
+    font-size: 12px; /* Мелкий шрифт для даты */
+    color: #aaa; /* Светло-серый цвет */
+}
+
+.post-title {
+    margin: 10px 0; /* Отступ сверху и снизу */
+    color: #e64545; /* Ярко-красный цвет заголовка */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.post-text {
+    line-height: 1.6; /* Увеличенное межстрочное расстояние */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.post-image-container {
+    margin: 15px 0; /* Отступы сверху и снизу */
+    text-align: left; /* Выравнивание вложенного изображения */
+}
+
+.post-image {
+    width: 80%; /* Ширина изображения относительно контейнера */
+    max-width: 500px; /* Максимальная ширина */
+    border-radius: 8px; /* Скруглённые углы */
+    display: block; /* Блочный элемент */
+    margin: 0 auto; /* Центрирование изображения */
+}
+
+.post-tags {
+    margin: 10px 0; /* Отступы сверху и снизу */
+    text-align: left; /* Выравнивание тегов влево */
+}
+
+.post-tags span {
+    margin-right: 10px; /* Расстояние между тегами */
+}
+
+.post-actions {
+    display: flex; /* Горизонтальное размещение действий */
+    gap: 15px; /* Отступ между элементами */
+    margin-top: 10px; /* Отступ сверху */
+    font-size: 14px; /* Размер текста */
+}
+
+.post-actions a {
+    color: #aaa; /* Цвет иконок и ссылок */
+    text-decoration: none; /* Убираем подчёркивание */
+    display: flex; /* Иконка и текст по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    gap: 5px; /* Расстояние между иконкой и текстом */
+}
+
+.post-actions img {
+    width: 16px; /* Размер иконок */
+    height: 16px;
+}
+
+/* Адаптивные стили для экранов до 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Уменьшенные отступы */
+  }
+
+  .auth-container {
+    text-align: center; /* Центрирование блока авторизации */
+    margin-top: 10px;
+    position: static; /* Убираем абсолютное позиционирование */
+  }
+
+  #logo-container img {
+    width: 120px; /* Уменьшение логотипа */
+    height: auto;
+  }
+
+  nav {
+    padding: 10px 5px; /* Уменьшенные отступы навигации */
+  }
+
+  nav strong {
+    display: block; /* Перенос текста на новую строку */
+  }
+
+  nav a {
+    display: block; /* Столбцовое отображение ссылок */
+    margin: 6px 0;
+    font-size: 1em;
+  }
+
+  #search-form-container form {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение элементов */
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .post-column {
+    max-width: 100%; /* Полная ширина на мобильных */
+    width: 100%;
+  }
+
+  .post-image {
+    width: 100%; /* Адаптация изображения под ширину */
+    height: auto;
+  }
+
+  aside {
+    width: 100% !important; /* Боковая панель — на всю ширину */
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%; /* Полная ширина таблиц */
+  }
+
+  td {
+    display: block; /* Построчное отображение ячеек */
+    text-align: center; /* Центрирование содержимого */
+  }
+
+  .post-actions {
+    flex-wrap: wrap; /* Перенос кнопок на следующую строку */
+    gap: 10px;
+    justify-content: center; /* Центрирование кнопок */
+  }
+
+  .post-actions a {
+    flex: 1 1 45%; /* Две кнопки в ряд */
+    text-align: center;
+  }
+
+  canvas {
+    width: 100% !important; /* Адаптация графиков Chart.js */
+    height: auto !important;
+  }
+}

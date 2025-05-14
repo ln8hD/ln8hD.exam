@@ -1,0 +1,173 @@
+<!-- Объявление типа документа и начало HTML-страницы с указанием языка -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Установка кодировки документа -->
+    <meta charset="UTF-8">
+
+    <!-- Адаптивная верстка: корректное отображение на разных устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Описание сайта для поисковых систем -->
+    <meta name="description" content="Форум, посвященный horror-rpg играм. Обсуждение, прохождения и теории.">
+
+    <!-- Подключение внешнего CSS-файла -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Заголовок страницы, отображаемый на вкладке браузера -->
+    <title>HorRPG</title>
+</head>
+
+<body>
+
+    <!-- Блок с кнопкой авторизации -->
+    <div class="auth-container">
+        <a href="login.html" class="auth-button">Авторизация</a>
+    </div>
+
+    <!-- Заголовок сайта с логотипом и приветствием -->
+    <header style="text-align: center; margin-top: 20px;">
+        <div id="logo-container" style="display: inline-block; position: relative;">
+            <!-- Кликабельный логотип, ведущий на главную страницу -->
+            <a href="index.html">
+                <img src="image/logo.png" alt="HorRPG" style="width: 180px; height: auto;">
+            </a>
+        </div>
+        <p>Добро пожаловать!</p>
+    </header>
+
+    <!-- Вступительный текст о тематике форума -->
+    <div style="text-align: center; width: 70%; margin: 0 auto;">
+        <p style="text-align: justify;">
+            Здесь собраны самые мрачные, атмосферные и пугающие ролевые игры. Обсуждайте сюжеты, делитесь прохождениями, находите единомышленников и погружайтесь в хоррор-вселенные вместе с нами. 
+            Обязательно ознакомьтесь с правилами сайта перед публикацией и прочтите FAQ, если хотите узнать больше о том, как пользоваться сайтом.
+        </p>
+    </div>
+
+    <!-- Навигационное меню форума -->
+    <nav style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+        <strong>
+            <a href="404.html">Новое</a> | 
+            <a href="popular.html">Популярное</a> |  
+            <a href="creation.html">Творчество</a> |
+            <a href="404.html">Сообщества</a>
+        </strong>
+    </nav>
+
+    <!-- Кнопки поиска и создания постов -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <div style="display: inline-block;">
+            <!-- Кнопка для показа/скрытия поисковой формы -->
+            <a href="javascript:void(0)" onclick="toggleSearch()" id="search-toggle">Поиск</a>
+            <span> | </span>
+            <!-- Кнопка создания поста -->
+            <strong><a href="create.html">Создать пост</a></strong>
+        </div>
+
+        <!-- Скрытая форма поиска, отображается по нажатию "Поиск" -->
+        <div id="search-form-container" style="display: none; margin-top: 10px;">
+            <form id="search-form" onsubmit="return false;" style="display: inline;">
+                <input type="text" id="search-input" placeholder="Введите запрос" style="padding: 5px;">
+                <button type="submit" onclick="handleSearch()" style="padding: 5px 10px;">Поиск</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Два списка тематик, выровненные по центру -->
+    <div class="flex-lists" style="display: flex; justify-content: center; margin-top: 20px; gap: 50px;">
+        <ul>
+            <li><strong>Вселенная игр</strong>
+                <ul>
+                    <li>Гайды</li>
+                    <li>Пасхалки</li>
+                    <li>Теории</li>
+                    <li>Лор</li>
+                    <li>Обсуждения</li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li><strong>Творчество</strong>
+                <ul>
+                    <li>Арты</li>
+                    <li>Видео</li>
+                    <li>Фанфики</li>
+                    <li>Косплеи</li>
+                    <li>Хенд-мейд</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Таблица с тегами и количеством постов -->
+    <table align="center" border="1" cellspacing="0" cellpadding="10" width="70%" style="margin-top: 20px;">
+        <tr>
+            <th align="center"><strong>Теги</strong></th>
+            <th align="center"><strong>Название тега</strong></th>
+            <th align="center"><strong>Количество постов</strong></th>
+        </tr>
+        <tr>
+            <td align="center">/gd/</td>
+            <td align="center">Гайды, прохождение</td>
+            <td align="center">000000000</td>
+        </tr>
+        <tr>
+            <td align="center">/scrt/</td>
+            <td align="center">Секреты, пасхалки</td>
+            <td align="center">000000000</td>
+        </tr>
+        <tr>
+            <td align="center">/trs/</td>
+            <td align="center">Теории</td>
+            <td align="center">000000000</td>
+        </tr>
+        <tr>
+            <td align="center">/l/</td>
+            <td align="center">Лор, сюжет</td>
+            <td align="center">000000000</td>
+        </tr>
+        <tr>
+            <td align="center">/spl/</td>
+            <td align="center">Спойлеры</td>
+            <td align="center">000000000</td>
+        </tr>
+    </table>
+
+    <!-- Блок футера с логотипом и ссылками -->
+    <table align="center" cellspacing="0" cellpadding="10" width="40%" style="margin-top: 20px; border: none;">
+        <tr>
+            <td align="center" style="display: flex; align-items: center; justify-content: center; border: none;">
+                <img src="image/image01.png" alt="Логотип" style="width: 80px; height: auto; margin-right: 20px;" loading="lazy">
+                <div>
+                    <a href="404.html">Контакты</a> <br>
+                    <a href="404.html">FAQ</a> <br>
+                    <a href="404.html">Правила сайта</a> <br>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Ссылки на социальные сети -->
+        <tr>
+            <td align="center" style="border: none;">
+                <div>
+                    <strong>Наши соцсети:</strong>
+                    <div class="social-icons" style="display: flex; justify-content: center; gap: 15px; margin-top: 8px;">
+                        <a href="https://vk.com" target="_blank"><img src="image/vk.png" alt="VK" style="width: 30px; height: 30px;"></a>
+                        <a href="http://twitter.com" target="_blank"><img src="image/tw.png" alt="TwitterX" style="width: 30px; height: 30px;"></a>
+                        <a href="https://telegram.org/" target="_blank"><img src="image/tg.png" alt="Telegram" style="width: 30px; height: 30px;"></a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" style="border: none;">© 2025 HorRPG Forum. Все права защищены.</td>
+        </tr>
+    </table>
+
+    <!-- Подключение JavaScript-файла для логики поиска -->
+    <script src="search.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Spectral+SC:wght@200;400;700&display=swap');
+
+body {
+    background: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Spectral SC', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#logo-container {
+    margin-top: 30px;
+}
+
+#logo-container img {
+    max-width: 200px; /* Устанавливаем размер логотипа */
+    height: auto;
+}
+
+.form-container {
+    width: 350px; /* Компактная форма */
+    margin: 40px auto;
+    padding: 15px 20px;
+    background: rgba(20, 20, 20, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.3);
+    box-sizing: border-box;
+    text-align: left;
+}
+
+h2 {
+    color: #e0e0e0;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: 'Spectral SC', serif;
+}
+
+label {
+    display: block;
+    margin: 6px 0 3px;
+    font-weight: 400;
+    text-align: center; /* Центрируем метки */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #ff3b3b;
+    border-radius: 5px;
+    font-family: 'Spectral SC', serif;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 6px;
+    accent-color: #ff3b3b;
+}
+
+/* Центрирование текста "Пол" */
+.centered-label {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Важно для корректного отображения выбора пола */
+.gender-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Выравнивание по центру */
+    align-items: center;
+}
+
+.gender-container label {
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #ff3b3b, #800000);
+    color: #fff;
+    font-family: 'Spectral SC', serif;
+    border: 1px solid #ff3b3b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #d62828, #600000);
+    transform: scale(1.03);
+}
+
+@media (max-width: 400px) {
+    .form-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .auth-container {
+    text-align: center;
+    margin-top: 10px;
+    position: static;
+  }
+
+  #logo-container img {
+    width: 120px;
+    height: auto;
+  }
+
+  nav {
+    padding: 10px 5px;
+  }
+
+  nav strong {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+    font-size: 1em;
+  }
+
+  #search-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .post-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+
+  aside {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    display: block;
+    text-align: center;
+  }
+
+  .post-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .post-actions a {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

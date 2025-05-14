@@ -1,0 +1,155 @@
+/* Стили для таблицы галереи */
+.gallery-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 20px;
+    text-align: center;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Ячейки таблицы галереи */
+.gallery-table td {
+    vertical-align: top;
+    border: none !important;
+    background: transparent !important;
+    padding: 10px;
+}
+
+/* Изображения в галерее */
+.gallery-table img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Эффект при наведении на изображение */
+.gallery-table img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Автор под изображением */
+.author {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Стили модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9); /* затемнение фона */
+}
+
+/* Контент модального окна (изображение) */
+.modal-content {
+    margin: 5% auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+/* Подпись под изображением в модалке */
+.modal-caption {
+    color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Кнопка закрытия модального окна */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ccc;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Адаптивная верстка для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .auth-container {
+    text-align: center;
+    margin-top: 10px;
+    position: static;
+  }
+
+  #logo-container img {
+    width: 120px;
+    height: auto;
+  }
+
+  nav {
+    padding: 10px 5px;
+  }
+
+  nav strong {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+    font-size: 1em;
+  }
+
+  #search-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .post-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+
+  aside {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    display: block;
+    text-align: center;
+  }
+
+  .post-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .post-actions a {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

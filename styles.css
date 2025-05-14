@@ -1,0 +1,295 @@
+/* Импорт нестандартных шрифтов с Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Spectral+SC:wght@200;400;700&display=swap');
+
+/* Основные стили для страницы */
+body {
+    background: #0d0d0d; /* тёмный фон */
+    color: #e0e0e0; /* светлый текст */
+    font-family: 'Spectral SC', serif; /* основной шрифт */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Ссылки и их поведение при наведении */
+a {
+    color: #ff3b3b; /* ярко-красный */
+    text-decoration: none;
+    transition: color 0.3s; /* плавное изменение цвета */
+}
+
+a:hover {
+    color: #d62828; /* темнее при наведении */
+}
+
+/* Стилизация заголовка с ссылкой */
+h1 a {
+    font-size: 3em;
+    color: #ff3b3b;
+    text-shadow: 0 0 10px #ff3b3b; /* светящийся эффект */
+    transition: text-shadow 0.3s;
+    font-family: 'Pirata One', cursive; /* декоративный шрифт */
+}
+
+h1 a:hover {
+    text-shadow: 0 0 20px #ff3b3b;
+}
+
+/* Основный контейнер для содержимого */
+.container {
+    width: 70%;
+    margin: 20px auto;
+    background: rgba(20, 20, 20, 0.9); /* полупрозрачный тёмный фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* красная тень */
+}
+
+/* Навигационная панель */
+nav {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Ссылки в навигации */
+nav a {
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+/* Контейнер кнопок авторизации */
+.auth-container {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+/* Кнопки авторизации */
+.auth-button {
+    display: inline-block;
+    background: #800000; /* тёмно-красный фон */
+    color: #fff;
+    font-family: 'Pirata One', cursive;
+    font-size: 0.9em;
+    padding: 6px 14px;
+    border: 2px solid #ff3b3b;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    text-shadow: 0 0 3px #000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+/* Анимация кнопки авторизации при наведении */
+.auth-button:hover {
+    background: #600000;
+    border-color: #d62828;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+}
+
+/* Таблицы: общая стилизация */
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Границы и стили ячеек таблиц */
+table, th, td {
+    border: 1px solid #ff3b3b;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Spectral SC', serif;
+}
+
+/* Заголовки таблиц */
+th {
+    background: #ff3b3b;
+    color: #0d0d0d; /* контрастный текст */
+}
+
+/* Ячейки данных */
+td {
+    background: #1a1a1a;
+}
+
+/* Нижний колонтитул */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    border-top: 2px solid #ff3b3b;
+}
+
+/* Стили для текстовых полей и текстовых областей */
+input[type="text"], textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #ff3b3b;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Spectral SC', serif;
+}
+
+/* Общий стиль кнопок */
+button {
+    background: linear-gradient(45deg, #ff3b3b, #800000);
+    color: #fff;
+    border: 1px solid #ff3b3b;
+    padding: 6px 12px;
+    font-family: 'Spectral SC', serif;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Эффект при наведении на кнопки */
+button:hover {
+    background: linear-gradient(45deg, #d62828, #600000);
+    transform: scale(1.05);
+}
+
+/* Контейнер формы публикации постов */
+.post-form-container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Таблица в форме публикации */
+.post-form-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 10px !important;
+    background: transparent !important;
+    margin: 0 !important;
+}
+
+/* Ячейки таблицы формы публикации */
+.post-form-table td {
+    background: rgba(30, 30, 30, 0.9) !important;
+    border: 1px solid #ff3b3b !important;
+    padding: 10px !important;
+}
+
+/* Поля ввода внутри формы поста */
+.post-form-table input[type="text"],
+.post-form-table textarea {
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* Таблица для счётчика постов */
+.post-counter-table {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 20px auto !important;
+    border-collapse: collapse !important;
+}
+
+/* Ячейки таблицы счётчика постов */
+.post-counter-table td {
+    background: #1a1a1a !important;
+    border: 1px solid #ff3b3b !important;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  /* Центрирование кнопок авторизации */
+  .auth-container {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Уменьшение логотипа */
+  #logo-container img {
+    width: 120px;
+    height: auto;
+  }
+
+  nav {
+    padding: 10px 5px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 1em;
+  }
+
+  /* Сжатие основного контейнера */
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .post-form-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .post-form-table td,
+  .post-counter-table td {
+    padding: 8px;
+  }
+
+  input[type="text"],
+  textarea,
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Адаптация формы поиска */
+  #search-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  /* Адаптация списков */
+  .flex-lists {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .flex-lists ul {
+    margin-left: 0 !important;
+  }
+
+  /* Адаптация иконок соцсетей */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Форум, посвященный horror-rpg играм. Обсуждение, прохождения и теории." />
+    <title>HorRPG</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+    <header class="centered-header">
+        <div id="logo-container">
+            <a href="index.html">
+                <img src="image/logo.png" alt="HorRPG" />
+            </a>
+        </div>
+    </header>
+
+<!-- Контейнер формы регистрации -->
+    <div class="form-container">
+        <h2><strong>Регистрация</strong></h2>
+
+        <form id="registrationForm" action="register.php" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Адрес почты:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label class="centered-label">Пол:</label>
+            <div class="gender-container">
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Женщина</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Мужчина</label>
+            </div>
+
+            <label for="dob">Дата рождения:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <button type="submit" id="submitButton"><strong>Зарегистрироваться</strong></button>
+        </form>
+    </div>
+
+<!-- Подключение скрипта для проверки данных -->
+    <script src="login.js"></script>
+</body>
+</html>

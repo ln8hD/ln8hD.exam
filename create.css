@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Spectral+SC:wght@200;400;700&display=swap');
+
+body {
+    background: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Spectral SC', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    color: #ff3b3b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #d62828;
+}
+
+h1 a {
+    font-size: 3em;
+    color: #ff3b3b;
+    text-shadow: 0 0 10px #ff3b3b;
+    transition: text-shadow 0.3s;
+    font-family: 'Pirata One', cursive;
+}
+
+h1 a:hover {
+    text-shadow: 0 0 20px #ff3b3b;
+}
+
+.container {
+    width: 70%;
+    margin: 20px auto;
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+nav {
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.auth-container {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 10; /* Обеспечиваем, что кнопка не будет перекрыта другими элементами */
+}
+
+nav a {
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.auth-container {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.auth-button {
+    display: inline-block;
+    background: #800000;
+    color: #fff;
+    font-family: 'Pirata One', cursive;
+    font-size: 0.9em;
+    padding: 6px 14px;
+    border: 2px solid #ff3b3b;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    text-shadow: 0 0 3px #000;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+}
+
+.auth-button:hover {
+    background: #600000;
+    border-color: #d62828;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+}
+
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ff3b3b;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Spectral SC', serif;
+}
+
+th {
+    background: #ff3b3b;
+    color: #0d0d0d;
+}
+
+td {
+    background: #1a1a1a;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    border-top: 2px solid #ff3b3b;
+}
+
+/* Добавленные стили */
+input[type="text"], textarea {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #ff3b3b;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Spectral SC', serif;
+}
+
+button {
+    background: linear-gradient(45deg, #ff3b3b, #800000);
+    color: #fff;
+    border: 1px solid #ff3b3b;
+    padding: 6px 12px;
+    font-family: 'Spectral SC', serif;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #d62828, #600000);
+    transform: scale(1.05);
+}
+
+/* Специальные стили для формы поста */
+.post-form-container {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.post-form-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 10px !important;
+    background: transparent !important;
+    margin: 0 !important;
+}
+
+.post-form-table td {
+    background: rgba(30, 30, 30, 0.9) !important;
+    border: 1px solid #ff3b3b !important;
+    padding: 10px !important;
+}
+
+.post-form-table input[type="text"],
+.post-form-table textarea {
+    width: 100% !important;
+    box-sizing: border-box;
+}
+
+/* Для счетчика постов */
+.post-counter-table {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 20px auto !important;
+    border-collapse: collapse !important;
+}
+
+.post-counter-table td {
+    background: #1a1a1a !important;
+    border: 1px solid #ff3b3b !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .auth-container {
+    text-align: center;
+    margin-top: 10px;
+    position: static;
+  }
+
+  #logo-container img {
+    width: 120px;
+    height: auto;
+  }
+
+  nav {
+    padding: 10px 5px;
+  }
+
+  nav strong {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    margin: 6px 0;
+    font-size: 1em;
+  }
+
+  #search-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .post-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+
+  aside {
+    width: 100% !important;
+    margin-top: 20px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td {
+    display: block;
+    text-align: center;
+  }
+
+  .post-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .post-actions a {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

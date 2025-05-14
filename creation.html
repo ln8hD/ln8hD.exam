@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форум, посвященный horror-rpg играм. Обсуждение, прохождения и теории.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery.css"> <!-- Подключение стиля для галлереи -->
+    <title>HorRPG</title>
+</head>
+<body>
+
+    <div class="auth-container">
+        <a href="login.html" class="auth-button">Авторизация</a>
+    </div>
+
+    <header style="text-align: center; margin-top: 20px;">
+        <div id="logo-container" style="display: inline-block; position: relative;">
+            <a href="index.html">
+                <img src="image/logo.png" alt="HorRPG" style="width: 180px; height: auto;">
+            </a>
+        </div>
+    </header>
+
+    <div style="text-align: center; width: 70%; margin: 0 auto;">
+        <p style="text-align: justify;">
+            Здесь располагается галерея авторских работ — рисунки, скетчи, цифровые арты от наших пользователей. Делитесь своими работами, вдохновляйтесь чужим творчеством, обсуждайте и оценивайте.
+            Перед публикацией ознакомьтесь с правилами сайта. Обязательные правила публикации: только авторский контент и отметки на спойлеры!
+        </p>
+    </div>
+
+    <nav style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+        <strong>
+            <a href="404.html">Новое</a> | 
+            <a href="popular.html">Популярное</a> |  
+            <a href="creation.html">Творчество</a> |
+            <a href="404.html">Сообщества</a>
+        </strong>
+    </nav>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <div style="display: inline-block;">
+            <a href="javascript:void(0)" onclick="toggleSearch()" id="search-toggle">Поиск</a>
+            <span> | </span>
+            <strong><a href="create.html">Создать пост</a></strong>
+        </div>
+        <div id="search-form-container" style="display: none; margin-top: 10px;">
+            <form id="search-form" onsubmit="return false;" style="display: inline;">
+                <input type="text" id="search-input" placeholder="Введите запрос" style="padding: 5px;">
+                <button type="submit" onclick="handleSearch()" style="padding: 5px 10px;">Поиск</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Галерея в таблице -->
+    <table class="gallery-table">
+        <tr>
+            <td><a href="image/image1.jpg" onclick="openModal('image/image1.jpg', 'Автор: Mera'); return false;"><img src="image/image1.jpg" alt="Автор: Mera" loading="lazy"></a><p class="author">Автор: Mera</p></td>
+            <td><a href="image/image2.jpg" onclick="openModal('image/image2.jpg', 'Автор: lupus'); return false;"><img src="image/image2.jpg" alt="Автор: lupus" loading="lazy"></a><p class="author">Автор: lupus</p></td>
+            <td><a href="image/image3.jpg" onclick="openModal('image/image3.jpg', 'Автор: ag8st'); return false;"><img src="image/image3.jpg" alt="Автор: ag8st" loading="lazy"></a><p class="author">Автор: ag8st</p></td>
+        </tr>
+        <tr>
+            <td><a href="image/image4.jpg" onclick="openModal('image/image4.jpg', 'Автор: Funa'); return false;"><img src="image/image4.jpg" alt="Автор: Funa" loading="lazy"></a><p class="author">Автор: Funa</p></td>
+            <td><a href="image/image5.jpg" onclick="openModal('image/image5.jpg', 'Автор: SaDora'); return false;"><img src="image/image5.jpg" alt="Автор: SaDora" loading="lazy"></a><p class="author">Автор: SaDora</p></td>
+            <td><a href="image/image6.jpg" onclick="openModal('image/image6.jpg', 'Автор: Oleja'); return false;"><img src="image/image6.jpg" alt="Автор: Oleja" loading="lazy"></a><p class="author">Автор: Oleja</p></td>
+        </tr>
+        <tr>
+            <td><a href="image/image7.jpg" onclick="openModal('image/image7.jpg', 'Автор: hurma'); return false;"><img src="image/image7.jpg" alt="Автор: hurma" loading="lazy"></a><p class="author">Автор: hurma</p></td>
+            <td><a href="image/image8.jpg" onclick="openModal('image/image8.jpg', 'Автор: vientt'); return false;"><img src="image/image8.jpg" alt="Автор: vientt" loading="lazy"></a><p class="author">Автор: vientt</p></td>
+            <td><a href="image/image9.jpg" onclick="openModal('image/image9.jpg', 'Автор: Morra'); return false;"><img src="image/image9.jpg" alt="Автор: Morra" loading="lazy"></a><p class="author">Автор: Morra</p></td>
+        </tr>
+    </table>
+
+    <!-- Модальное окно для увеличения -->
+    <div id="imgModal" class="modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- Футер -->
+    <table align="center" cellspacing="0" cellpadding="10" width="40%" style="margin-top: 20px; border: none;">
+        <tr>
+            <td align="center" style="display: flex; align-items: center; justify-content: center; border: none;">
+                <img src="image/image01.png" alt="Логотип" style="width: 80px; height: auto; margin-right: 20px;" loading="lazy">
+                <div>
+                    <a href="404.html">Контакты</a> <br>
+                    <a href="404.html">FAQ</a> <br>
+                    <a href="404.html">Правила сайта</a> <br>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="border: none;">
+                <div>
+                    <strong>Наши соцсети:</strong>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 8px;">
+                        <a href="https://vk.com" target="_blank"><img src="image/vk.png" alt="VK" style="width: 30px; height: 30px;"></a>
+                        <a href="http://twitter.com" target="_blank"><img src="image/tw.png" alt="TwitterX" style="width: 30px; height: 30px;"></a>
+                        <a href="https://telegram.org/" target="_blank"><img src="image/tg.png" alt="Telegram" style="width: 30px; height: 30px;"></a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="border: none;">© 2025 HorRPG Forum. Все права защищены.</td>
+        </tr>
+    </table>
+
+    <script src="search.js"></script>
+    <script src="gallery.js"></script> <!-- Подключение скприпта для галлереи -->
+</body>
+</html>
+

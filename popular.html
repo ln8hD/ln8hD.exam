@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форум, посвященный horror-rpg играм. Обсуждение, прохождения и теории.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popular.css">
+    <title>HorRPG</title>
+</head>
+<body>
+
+    <div class="auth-container">
+        <a href="login.html" class="auth-button">Авторизация</a>
+    </div>
+
+    <header style="text-align: center; margin-top: 20px;">
+        <div id="logo-container" style="display: inline-block; position: relative;">
+            <a href="index.html">
+                <img src="image/logo.png" alt="HorRPG" style="width: 180px; height: auto;">
+            </a>
+        </div>
+    </header>
+
+    <nav style="text-align: center; margin-top: 10px; margin-bottom: 20px;">
+        <strong>
+            <a href="404.html">Новое</a> | 
+            <a href="popular.html">Популярное</a> |  
+            <a href="creation.html">Творчество</a> |
+            <a href="404.html">Сообщества</a>
+        </strong>
+    </nav>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <div style="display: inline-block;">
+            <a href="javascript:void(0)" onclick="toggleSearch()" id="search-toggle">Поиск</a>
+            <span> | </span>
+            <strong><a href="create.html">Создать пост</a></strong>
+        </div>
+        <div id="search-form-container" style="display: none; margin-top: 10px;">
+            <form id="search-form" onsubmit="return false;" style="display: inline;">
+                <input type="text" id="search-input" placeholder="Введите запрос" style="padding: 5px;">
+                <button type="submit" onclick="handleSearch()" style="padding: 5px 10px;">Поиск</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Лента постов и блок графиков -->
+    <div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px; padding: 20px;">
+
+        <!-- Колонка постов -->
+        <div class="post-column" style="flex: 1; max-width: 60%;">
+
+            <!-- Пост 1 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="image/user.png" alt="Avatar" class="avatar">
+                    <strong class="username">DarkSlayer</strong>
+                    <span class="post-date">13 мая 2025, 14:32</span>
+                </div>
+                <h3 class="post-title">Моя теория по Silent Hill</h3>
+                <p class="post-text">Недавно переиграл в третью часть и заметил детали, которые, возможно, намекают на связь Хезер с другими персонажами. Делюсь своими мыслями.</p>
+                <div class="post-image-container">
+                    <img src="image/post1.jpg" alt="Изображение поста" class="post-image">
+                </div>
+                <div class="post-tags">
+                    <span>#SilentHill</span>
+                    <span>#Теория</span>
+                    <span>#Хоррор</span>
+                </div>
+                <div class="post-actions">
+                    <a href="#"><img src="image/comment.png" alt="Комментарии"> Комментарии</a>
+                    <a href="#"><img src="image/like.png" alt="Лайк"> 23</a>
+                    <a href="#"><img src="image/favorite.png" alt="В избранное"> В избранное</a>
+                    <a href="#"><img src="image/share.png" alt="Поделиться"> Поделиться</a>
+                </div>
+            </div>
+
+            <!-- Пост 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="image/user.png" alt="Avatar" class="avatar">
+                    <strong class="username">NightHunter</strong>
+                    <span class="post-date">12 мая 2025, 18:10</span>
+                </div>
+                <h3 class="post-title">Гайд по прохождению Amnesia</h3>
+                <p class="post-text">Пошаговое руководство по выживанию и поиску всех секретов в "The Dark Descent". Будет полезно новичкам и фанатам жанра.</p>
+                <div class="post-image-container">
+                    <img src="image/post2.jpg" alt="Изображение поста" class="post-image">
+                </div>
+                <div class="post-tags">
+                    <span>#Amnesia</span>
+                    <span>#Гайд</span>
+                </div>
+                <div class="post-actions">
+                    <a href="#"><img src="image/comment.png" alt="Комментарии"> Комментарии</a>
+                    <a href="#"><img src="image/like.png" alt="Лайк"> 41</a>
+                    <a href="#"><img src="image/favorite.png" alt="В избранное"> В избранное</a>
+                    <a href="#"><img src="image/share.png" alt="Поделиться"> Поделиться</a>
+                </div>
+            </div>
+
+            <!-- Пост 3 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="image/user.png" alt="Avatar" class="avatar">
+                    <strong class="username">BloodEcho</strong>
+                    <span class="post-date">10 мая 2025, 22:47</span>
+                </div>
+                <h3 class="post-title">Ретро-обзор: Clock Tower</h3>
+                <p class="post-text">Вернулся к классике SNES и снова прочувствовал весь ужас погони. Игра, которую стоит попробовать всем фанатам horror!</p>
+                <div class="post-image-container">
+                    <img src="image/post3.jpg" alt="Изображение поста" class="post-image">
+                </div>
+                <div class="post-tags">
+                    <span>#ClockTower</span>
+                    <span>#Ретро</span>
+                    <span>#Обзор</span>
+                </div>
+                <div class="post-actions">
+                    <a href="#"><img src="image/comment.png" alt="Комментарии"> Комментарии</a>
+                    <a href="#"><img src="image/like.png" alt="Лайк"> 15</a>
+                    <a href="#"><img src="image/favorite.png" alt="В избранное"> В избранное</a>
+                    <a href="#"><img src="image/share.png" alt="Поделиться"> Поделиться</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Боковая панель с графиками-->
+        <aside style="width: 400px;">
+            <div style="background-color: #2b2b2b; padding: 20px; border-radius: 12px; color: #ccc; text-align: center;">
+                <h4>Статистика</h4>
+                <p>Топ-20 популярных Horror RPG игр (2025):</p>
+                <canvas id="chartBar" style="margin-top: 20px; width: 100%; height: 300px;"></canvas>
+                <p>Активность пользователей форума по месяцам:</p>
+                <canvas id="chartBar2" style="margin-top: 20px; width: 100%; height: 300px;"></canvas>
+            </div>
+        </aside>
+    </div>
+
+    <table align="center" cellspacing="0" cellpadding="10" width="40%" style="margin-top: 20px; border: none;">
+        <tr>
+            <td align="center" style="display: flex; align-items: center; justify-content: center; border: none;">
+                <img src="image/image01.png" alt="Логотип" style="width: 80px; height: auto; margin-right: 20px;" loading="lazy">
+                <div>
+                    <a href="404.html">Контакты</a> <br>
+                    <a href="404.html">FAQ</a> <br>
+                    <a href="404.html">Правила сайта</a> <br>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="border: none;">
+                <div>
+                    <strong>Наши соцсети:</strong>
+                    <div style="display: flex; justify-content: center; gap: 15px; margin-top: 8px;">
+                        <a href="https://vk.com" target="_blank"><img src="image/vk.png" alt="VK" style="width: 30px; height: 30px;"></a>
+                        <a href="http://twitter.com" target="_blank"><img src="image/tw.png" alt="TwitterX" style="width: 30px; height: 30px;"></a>
+                        <a href="https://telegram.org/" target="_blank"><img src="image/tg.png" alt="Telegram" style="width: 30px; height: 30px;"></a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="border: none;">© 2025 HorRPG Forum. Все права защищены.</td>
+        </tr>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Библиотека для графиков -->
+    <script src="chart.js"></script> <!-- Скрипт инициализации графиков -->
+    <script src="search.js"></script> <!-- Скрипт обработки поиска -->
+
+</body>
+</html>
+
